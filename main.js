@@ -10,6 +10,11 @@ const app = new Vue({
                 this.emails.push(res.data.response);
             });
         }
+        setTimeout(() => {
+            document.getElementById("load").style.display = "none";
+            document.getElementById("app").style.display = "block";
+        }, 3000);
+
         console.log(this.emails);
     }
 })
